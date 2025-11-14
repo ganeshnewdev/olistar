@@ -550,13 +550,72 @@ body {
     fill: #ffffff;
 }
 
-/* MOBILE FIX */
+/* ===========================
+   VERSION 1 — OLD MOBILE LAYOUT
+   Matches your older site's behavior
+=========================== */
+
 @media (max-width: 768px) {
-    .contact-item {
-        width: 95%;
+
+    /* Hide nav-links (no hamburger here) */
+    .nav-links {
+        display: none;
     }
 
-    .contact-content {
+    .contact-btn {
+        padding: 0.4rem 1.2rem;
+        font-size: 0.9rem;
+    }
+
+    /* Hero text scaling */
+    .hero h1 {
+        font-size: 2.4rem;
+    }
+
+    .hero h2 {
+        font-size: 1.3rem;
+    }
+
+    /* Hide floating cards like old design */
+    .floating-card {
+        display: none;
+    }
+
+    /* Experience badge moves inside flow */
+    .experience-badge {
+        position: static !important;
+        transform: none !important;
+        margin: 2rem auto !important;
+        width: fit-content;
+    }
+
+    /* About becomes single column */
+    .about-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        text-align: center;
+    }
+
+    /* Portfolio becomes 1-column */
+    .portfolio-grid {
+        grid-template-columns: 1fr !important;
         gap: 2rem;
     }
+
+    /* Contact section single column */
+    .contact-content {
+        grid-template-columns: 1fr !important;
+        gap: 2rem;
+    }
+
+    .contact-item {
+        width: 100%;
+    }
+
+    /* Social links centered */
+    .social-links {
+        justify-content: center;
+    }
+
 }
+
